@@ -1,4 +1,4 @@
-# PyNeo ![Python Logo](https://img.icons8.com/color/48/000000/python.png)
+#  ![Python Logo](https://img.icons8.com/color/48/000000/python.png) PyNeo
 
 ## 💫 About This Repository:
 Welcome to my Python Programs Repository! Explore a collection of Python projects and code samples. Feel free to fork, contribute, and use the code as needed.
