@@ -66,5 +66,7 @@ def verificacion(ced):
         print('Usted proviene de Santa Elena')
     elif prov == "30":
         print('Número reservado para ecuatorianos registrados en el exterior.')
-
+    else:
+        print("Error!")
+        exit()
 ingesta()
