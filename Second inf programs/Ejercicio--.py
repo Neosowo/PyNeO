@@ -1,3 +1,4 @@
+#Desarrollar un programa que mediante los dos primeros digitos de tu cédula identifique su provincia
 def registro(ced):
     n = 1
     while len(ced) != 10:
