@@ -6,8 +6,8 @@ Welcome to my Python Programs Repository! Explore a collection of Python project
 ## 💻 Tech Stack for Python Programs:
 ![Python](https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
 
-## 🚀 Featured Projects:
-- [Project 1](https://github.com/Neosowo/Project1): Not available.
+## 🚀 First inf programs:
+- [Ejercicio01](https://github.com/Neosowo/Project1): Not available.
 - [Project 2](https://github.com/Neosowo/Project2): Not available.
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
