@@ -52,7 +52,7 @@ def registro(ced):
     elif ced[0] == "2" and ced[1] == "4":
         print('Usted proviene de Santa Elena')
     elif ced[0] == "3" and ced[1] == "0":
-        print('N09úmero reservado para ecuatorianos registrados en el exterior.')
+        print('Número reservado para ecuatorianos registrados en el exterior.')
 
 ced = input('Ingrese su cédula: ')
 registro(ced)
