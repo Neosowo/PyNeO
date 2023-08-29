@@ -2,7 +2,6 @@
 def registro(ced):
     while len(ced) != 10:
         ced = input("Su cédula no puede tener más de 10 dígitos")
-
     if ced[0] == "0" and ced[1] == "1":
         print('Usted proviene de Azuay')
     elif ced[0] == "0" and ced[1] == "2":
