@@ -3,32 +3,22 @@ import datetime
 import subprocess
 owo = tk.Tk()
 
-
 user = tk.StringVar(owo)
 password = tk.StringVar(owo)
 register = open("regis.txt", "w")
 
 
-
 def cont():
-
     if user.get() != "qwert" or password.get() != "qwert":
-
         with open("log.txt", "a") as log_file:
             log_file.write(f"ERROR - TIME: {datetime.datetime.now()}\n")
         
 
-
-
-
 owo.geometry("400x320") #TAMAÑO DE LA VENTANA
 owo.resizable(False, False) #NO PUEDA CAMBIAR TA
-
-#Login
-
-
-owo.title("Login")
-tk.Label(
+owo.title("Login") #TITULO DE LA VENTANA
+#TEXTO
+tk.Label( #TEXTO
     owo,
     text="USER:",
     font=("Courier", 16),
@@ -37,7 +27,7 @@ tk.Label(
 ).pack(
     fill=tk.BOTH,
 )
-
+#ENTRADA DE TEXTO
 tk.Entry(
     owo,
     foreground="#fff",
@@ -45,12 +35,10 @@ tk.Entry(
     borderwidth=1,
     font=("courier", 14),
     textvariable=user,
-
-    
 ).pack_configure(
     fill=tk.BOTH,
 )
-
+#TEXTO
 tk.Label(
     owo,
     text="CONTRASEÑA:",
@@ -60,8 +48,8 @@ tk.Label(
 ).pack(
     fill=tk.BOTH,
 )
-
-tk.Entry(
+#ENTRADA DE TEXTO
+tk.Entry( 
     owo,
     foreground="#fff",
     bg="#141414",
@@ -73,8 +61,8 @@ tk.Entry(
 ).pack_configure(
     fill=tk.BOTH,
 )
-
-tk.Button(
+#BOTON
+tk.Button( 
     owo,
     text = "Iniciar sesion",
     font= ("Courier", 15),
