@@ -1,7 +1,8 @@
 import tkinter as tk
 import datetime
 import subprocess
-owo = tk.Tk()
+
+owo = tk.Tk()#owo es la ventana
 
 user = tk.StringVar(owo)
 password = tk.StringVar(owo)
