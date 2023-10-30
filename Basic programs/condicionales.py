@@ -2,7 +2,6 @@
 x = 0
 if (x == 1):
     print("x es igual a 1")
-
 #Si queremos ingresar otra condicionante usando la misma variable, pero con diferente argumento, usamos la siguiente línea
 elif(x == 2):
     print("x es igual a 2")
