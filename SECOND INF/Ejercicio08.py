@@ -65,9 +65,9 @@ tk.Entry(
 #BOTON
 tk.Button( 
     owo,
+    command=cont,
     text = "Iniciar sesion",
     font= ("Courier", 15),
-    command=cont,
     relief="flat",
     bg="white",
     fg="black",
