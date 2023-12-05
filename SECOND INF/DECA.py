@@ -19,7 +19,7 @@ def calcular_entrada(entry_cant, entry_valu, entry_valt, entry_detal):
     valu = entry_valu.get()
 
     if not cant.replace('.', '').replace('-', '').isdigit() or not valu.replace('.', '').replace('-', '').isdigit():
-        messagebox.showwarning("Warning", "Enter valid numeric values for quantity and unit value.")
+        messagebox.showwarning("Error", "no valido numero")
         return 0
 
     if not cant or not valu:
@@ -52,10 +52,56 @@ def trans():
     qruc = ruc.get()
     qdireccion = direccion.get()
     qtel = tel.get()
+    print(qname)
+    
+    qn1detal = str(n1detal.get())
+    print(qn1detal)
 
     with open("Datos.txt", "a") as f:
       f.write(f"  {qname} , {qruc} , {qdireccion} , {qtel}" + "\n")
       f.write("////" + "\n")
+
+    with open("Lista.txt", "a") as q:
+        qn1detal = n1detal.get()
+        print(qn1detal)
+        qn2detal = n2detal.get()
+        qn3detal = n3detal.get()
+        qn4detal = n4detal.get()
+        qn5detal = n5detal.get()
+        qn6detal = n6detal.get()
+        qn7detal = n7detal.get()
+        qn8detal = n8detal.get()
+        qn9detal = n9detal.get()
+        qn10detal = n10detal.get()
+        q.write("LISTA DE PRODUCTOS\n")
+        if(len(qn1detal) > 0):
+            q.write(f"{qn1detal}")
+        if(len(qn2detal) > 0):
+            q.write(f"{qn2detal}")
+        if(len(qn3detal) > 0):
+            q.write(f"{qn3detal}")
+        if(len(qn4detal) > 0):
+            q.write(f"{qn4detal}")
+        if(len(qn5detal) > 0):
+            q.write(f"{qn5detal}")
+        if(len(qn6detal) > 0):
+            q.write(f"{qn6detal}")
+        if(len(qn7detal) > 0):
+            q.write(f"{qn7detal}")
+        if(len(qn8detal) > 0):
+            q.write(f"{qn8detal}")
+        if(len(qn9detal) > 0):
+            q.write(f"{qn9detal}")
+        if(len(qn10detal) > 0):
+            q.write(f"{qn10detal}")
+        
+        
+        
+
+
+            
+
+
 
     if not any([cantidad.get() for cantidad in cantidades]):
         messagebox.showwarning("Warning", "Ingrese al menos una cantidad.")
@@ -80,17 +126,7 @@ def trans():
     iva = 0.12 * subtotal
     total = subtotal + iva
 
-
-    subms.set(f"${subtotal:.2f}")
-    iva_label = tk.StringVar()
-    iva_label.set(f"${iva:.2f}")
-    iva_label_entry = tk.Label(owo, textvariable=iva_label)
-    iva_label_entry.grid(column=3, row=26)
-
-    total_label = tk.StringVar()
-    total_label.set(f"${total:.2f}")
-    total_label_entry = tk.Label(owo, textvariable=total_label)
-    total_label_entry.grid(column=3, row=27)
+    subms.set(f"${subtotal}")
 
 
 
@@ -120,13 +156,13 @@ tel = tk.Entry(owo)
 tel.grid(column=3, row=9)
 
 tk.Label(owo, text="-------------------------").grid(column=0, row=10)
-tk.Label(owo, text="-------------------------").grid(column=0, row=11)
+tk.Label(owo, text="Cantidad").grid(column=0, row=11)
 tk.Label(owo, text="-------------------------").grid(column=1, row=10)
-tk.Label(owo, text="-------------------------").grid(column=1, row=11)
+tk.Label(owo, text="Detalle").grid(column=1, row=11)
 tk.Label(owo, text="-------------------------").grid(column=2, row=10)
-tk.Label(owo, text="-------------------------").grid(column=2, row=11)
+tk.Label(owo, text="Valor U.").grid(column=2, row=11)
 tk.Label(owo, text="-------------------------").grid(column=3, row=10)
-tk.Label(owo, text="-------------------------").grid(column=3, row=11)
+tk.Label(owo, text="Valor T.").grid(column=3, row=11)
 
 tk.Label(owo, text="Cant ").grid(column=0, row=12)
 
