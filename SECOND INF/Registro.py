@@ -142,7 +142,7 @@ MCU6.grid(row=6, column=5)
 def verification():
     entries = [CANT1, CANT2, CANT3, CANT4, CANT5, CANT6,
                COSTU1, COSTU2, COSTU3, COSTU4, COSTU5, COSTU6,
-               PVU1, PVU2, PVU3, PVU4, PVU5, PVU6]
+               ]
 
     for entry in entries:
         value = entry.get()
@@ -166,9 +166,60 @@ def verification():
         tk.messagebox.showerror("Error", "Los campos de detalle no deben contener números")
         return
     
-    save_infomation()
+    calc()
 
-        
+
+
+import tkinter as tk
+
+def calc():
+    COSTU1_val = float(COSTU1.get())
+    COSTU2_val = float(COSTU2.get())
+    COSTU3_val = float(COSTU3.get())
+    COSTU4_val = float(COSTU4.get())
+    COSTU5_val = float(COSTU5.get())
+    COSTU6_val = float(COSTU6.get())
+    
+    CANT1_val = float(CANT1.get())
+    CANT2_val = float(CANT2.get())
+    CANT3_val = float(CANT3.get())
+    CANT4_val = float(CANT4.get())
+    CANT5_val = float(CANT5.get())
+    CANT6_val = float(CANT6.get())
+    
+    PVU1 = COSTU1_val / CANT1_val
+    PVU2 = COSTU2_val / CANT2_val
+    PVU3 = COSTU3_val / CANT3_val
+    PVU4 = COSTU4_val / CANT4_val
+    PVU5 = COSTU5_val / CANT5_val
+    PVU6 = COSTU6_val / CANT6_val
+    
+    PVU1.delete(0, tk.END)
+    PVU1.insert(0, PVU1)
+    
+    PVU2.delete(0, tk.END)
+    PVU2.insert(0, PVU2)
+    
+    PVU3.delete(0, tk.END)
+    PVU3.insert(0, PVU3)
+    
+    PVU4.delete(0, tk.END)
+    PVU4.insert(0, PVU4)
+    
+    PVU5.delete(0, tk.END)
+    PVU5.insert(0, PVU5)
+    
+    PVU6.delete(0, tk.END)
+    PVU6.insert(0, PVU6)
+
+
+
+
+
+
+
+
+
 def save_infomation():
     print("holamundo")
 
